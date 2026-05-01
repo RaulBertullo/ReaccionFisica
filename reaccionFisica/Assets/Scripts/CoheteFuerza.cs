@@ -1,18 +1,32 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CoheteFuerza : MonoBehaviour
 {
     Rigidbody rb;
+    public float fuerzaEmpuje = 300000f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    bool motorEncendido = false;
+
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnDespegar(InputAction.CallbackContext context)
     {
-        rb.AddForce(Vector3.up * 15f);
+        if (context.started)
+        {
+            motorEncendido = true;
+            Debug.Log("despegue");
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (motorEncendido)
+        {
+            rb.AddForce(Vector3.up * fuerzaEmpuje);
+        }
     }
 }

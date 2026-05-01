@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "CoheteDespegue",
+    "maps": [
+        {
+            "name": "Cohete",
+            "id": "f0dee05a-c49d-41d5-aa1f-158909d31465",
+            "actions": [
+                {
+                    "name": "Despegar",
+                    "type": "Button",
+                    "id": "366b2b3f-0cab-495e-a5e3-8ae5ad50be46",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7c0ff15b-fdd5-4edf-bee4-b7fec96f27dc",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Despegar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
